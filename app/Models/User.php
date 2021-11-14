@@ -12,6 +12,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
+
+
+    protected $table = "users";
     /**
      * The attributes that are mass assignable.
      *
@@ -22,7 +26,10 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    public function lienformation()
+    {
+        return $this->hasMany(Formation::class,'user_id','id');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
