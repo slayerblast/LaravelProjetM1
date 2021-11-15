@@ -49,7 +49,7 @@ j'ai eu une contrainte au niveau du temps qui ne m'a pas permis de terminer le p
 -N'oubliez pas de mettre le nom de la base de données dans le champs DB_DATABASE= de votre fichier ".env" ainsi que votre configuration MySql.
 
 - faire un ```php artisan migrate``` pour créer les données dans la base
-- faire un ```php artisant db:seed``` pour peupler la base de donnée
+- faire un ```php artisan db:seed``` pour peupler la base de donnée
 - faire un ```php artisan storage:link``` pour lien le dossier public au dossier storage
 - ```php artisan serve``` pour lancer le projet
 - le projet est accessible  à l'adresse suivante : http://localhost:8000/
