@@ -42,7 +42,7 @@
     <form method="POST" action="{{route('formationDelete',$formation->id)}} ">
         @csrf
         @method('DELETE')
-        <Button class="btn btn-danger">Supprimer cet formation</Button>
+        <Button class="btn btn-danger">Supprimer cette formation</Button>
     </form>
     <h2>Listes des chapitres</h2>
 

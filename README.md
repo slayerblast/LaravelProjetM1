@@ -7,59 +7,61 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Context de la plateforme
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Le projet a pour but de créer une plateforme de formations en ligne.
+3 profils son demandé :
+- Visiteur: accède à la liste des formations et peut consultant les details de celle-ci
+- formateur : c'est un visiteur qui à travers un formulaire de contact, demande à l'administrateur  de devenir formateur afin de créer et modifier ses formations.
+- administrateur : permet d'accepter les demandes pour devenir formateur qu'il recevra par e-mail et aussi consulter la liste des formations, modifier, ajouter ou supprimer une formation.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Actuellement, la plateforme permet:
+-Accéder à une liste de formation
+-Accéder aux détails d'une formation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Avancé du projet
+Actuellement, la plateforme permet:
+- Accéder à une liste de formation avec ses détails(nom, description, prix, date de création, catégories, types)
+- Accéder aux détails d'une formation
+- modifier les informations de la formation (nom, prix, description, image)
+- ajouter/supprimer un chapitre
+- Ajouter une formation
 
-## Learning Laravel
+Actuellement, la plateforme ne permet pas:
+- N'a pas de système d'autenthification et donc de profil (chapitre 5, 6, 7)
+- modifier un chapitre 
+- créer des catégories/listes et les ajouter à une formation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Les problèmes rencontrés
+le premier problème que j'ai rencontré à été au niveau du mymls qui ne permet pas de naviguer de façon libre sur les videos qu'on a déja vu ce qui m'a ralenti.
 
-## Laravel Sponsors
+j'ai rencontré un problème au niveau du peuplement de mes tables pivots qui fait que je me retrouve avec des formations qui n'ont pas de catégorie ou de type ou encore qui on deux fois le même type ou catégorie.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+j'ai eu une contrainte au niveau du temps qui ne m'a pas permis de terminer le projet.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Les commandes à utiliser
 
-## Contributing
+- Une fois le projet telecharger faire : ```composer install```
+- Si un fichier ".env" ne sait pas créer automatiquement, copier le fichier ".env.example" (sans oublié de le renommer) puis exécutez la commande suivante : ```php artisan key:generate```.
+- la base de donnée à pour nom : laravelprojetm1
+-N'oubliez pas de mettre le nom de la base de données dans le champs DB_DATABASE= de votre fichier ".env" ainsi que votre configuration MySql.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- faire un ```php artisan migrate``` pour créer les données dans la base
+- faire un ```php artisant db:seed``` pour peupler la base de donnée
+- faire un ```php artisan storage:link``` pour lien le dossier public au dossier storage
+- ```php artisan serve``` pour lancer le projet
+- le projet est accessible  à l'adresse suivante : http://localhost:8000/
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Documentation technique
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- MCD : disponible dans le dossier bdd_mcd au format jpg
+ <img src="bdd_mcd/Capture.JPG" alt="MCD_Image">
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+

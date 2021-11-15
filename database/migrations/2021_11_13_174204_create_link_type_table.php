@@ -14,9 +14,9 @@ class CreateLinkTypeTable extends Migration
     public function up()
     {
         Schema::create('lien_type', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_type');
+            $table->unsignedBigInteger('id_type')->index()->nullable();
             $table->foreign('id_type')->references('id')->on('type');
-            $table->unsignedBigInteger('id_formation');
+            $table->unsignedBigInteger('id_formation')->index()->nullable();
             $table->foreign('id_formation')->references('id')->on('formation');
            // Schema::enableForeignKeyConstraints();
         });

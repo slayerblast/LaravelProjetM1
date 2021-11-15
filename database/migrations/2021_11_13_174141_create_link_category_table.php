@@ -15,9 +15,9 @@ class CreateLinkCategoryTable extends Migration
     {
         Schema::create('lien_categorie', function (Blueprint $table) {           
             
-            $table->unsignedBigInteger('id_categorie');
+            $table->unsignedBigInteger('id_categorie')->index()->nullable();
             $table->foreign('id_categorie')->references('id')->on('categorie');
-            $table->unsignedBigInteger('id_formation');
+            $table->unsignedBigInteger('id_formation')->index()->nullable();
             $table->foreign('id_formation')->references('id')->on('formation');
            // Schema::enableForeignKeyConstraints();
         });
